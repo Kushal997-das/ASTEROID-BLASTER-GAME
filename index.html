@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asteroid Blaster</title>
+
+</head>
+<body>
+  <!-- ========== HOME SCREEN ========== -->
+  <div id="home" class="screen">
+    <h1>🚀 Asteroid Blaster</h1>
+    <p>Blast asteroids, collect boosters, and survive as long as you can!</p>
+
+    <h3>🕹️ How to Play</h3>
+    <ul class="instructions">
+      <li><b>Move:</b> Left/Right Arrows or A/D keys (touch buttons on phone)</li>
+      <li><b>Shoot:</b> Spacebar  (tap 🔫 on phone)</li>
+      <li><b>Boosters:</b> Collect glowing orbs for power-ups!</li>
+      <li>💥 Avoid getting hit by asteroids — one hit ends the game!</li>
+    </ul>
+
+    <label for="difficulty">Select Difficulty:</label><br>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select><br><br>
+
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <!-- ========== GAME SCREEN ========== -->
+  <div id="game" class="screen hidden">
+    <div class="top">
+      <button id="homeBtn">🏠 Home</button>
+      <button id="restart">🔁 Restart</button>
+      Score: <span id="score">0</span>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="c" width="640" height="480"></canvas>
+    </div>
+
+    <!-- Mobile touch buttons -->
+    <div id="touchControls">
+      <button id="leftBtn">⬅️</button>
+      <button id="fireBtn">🔫</button>
+      <button id="rightBtn">➡️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
