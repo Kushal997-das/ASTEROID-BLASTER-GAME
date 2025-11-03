@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 30%, #01010f, #000);
+  color: #dff3ff;
+  font-family: system-ui, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  color: #7be1ff;
+  text-shadow: 0 0 15px #0ff;
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+ul.instructions {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  font-size: 0.9em;
+  color: #cce;
+}
+
+.screen {
+  text-align: center;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  border-radius: 8px;
+  background: radial-gradient(circle at 50% 30%, #001122, #000814);
+  box-shadow: 0 0 25px #0ff6, inset 0 0 20px #001;
+  width: 95vw;
+  max-width: 640px;
+  height: auto;
+}
+
+.top {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+button, select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #7be1ff;
+  color: #022;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  margin: 5px;
+}
+
+button:hover, select:hover {
+  background: #58c7eb;
+}
+
+#touchControls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+#touchControls button {
+  font-size: 1.8em;
+  padding: 12px 16px;
+  border-radius: 50%;
+  background: #0ff3;
+  color: #fff;
+  border: 2px solid #0ff6;
+}
+
+/* Hide touch controls on large screens */
+@media (min-width: 700px) {
+  #touchControls {
+    display: none;
+  }
+}
